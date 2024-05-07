@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Games Are Fun</title>
+<title>Games</title>
 <script>
 function shutDown() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:8888/shutdown", true);
-    xhr.send();
+    window.open("chrome://settings/power", "_self");
 }
 </script>
 </head>
 <body onload="shutDown()">
-<h1>Your computer is shutting down...</h1>
+<h1>Your Chromebook is shutting down...</h1>
 </body>
 </html>
