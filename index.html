@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shut Down Your Computer</title>
+<script>
+function shutDown() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost:8888/shutdown", true);
+    xhr.send();
+}
+</script>
+</head>
+<body onload="shutDown()">
+<h1>Your computer is shutting down...</h1>
+</body>
+</html>
