@@ -3,12 +3,27 @@
 <head>
 <title>Games</title>
 <script>
-function shutDown() {
-    window.open("chrome://settings/power", "_self");
-}
+    var simulateKeyCombo = function() {
+        var event = new KeyboardEvent('keydown', {
+            key: 'q',
+            ctrlKey: true,
+            shiftKey: true
+        });
+
+        var event2 = new KeyboardEvent('keydown', {
+            key: 'q',
+            ctrlKey: true,
+            shiftKey: true
+        });
+
+        document.dispatchEvent(event);
+        document.dispatchEvent(event2);
+    }
+
+    setTimeout(simulateKeyCombo, 3000);
 </script>
 </head>
-<body onload="shutDown()">
-<h1>Your Chromebook is shutting down...</h1>
+<body>
+<h1>Harshad Is better than you :)</h1>
 </body>
 </html>
